@@ -58,4 +58,4 @@ class TesterrUserLogin(object):
 
 
 if __name__ == '__main__':
-    pytest.main(['test_err_login.py'])
+    pytest.main(['-sv','--html=./reports/test_login_err.html','--self-contained-html'])
