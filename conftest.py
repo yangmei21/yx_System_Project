@@ -9,7 +9,7 @@ def pytest_html_results_summary(prefix, summary, postfix):
 
 
 def pytest_html_report_title(report):
-    report.title = "用户登录测试报告"
+    report.title = "测试报告"
 
 
 def pytest_html_results_table_header(cells):
