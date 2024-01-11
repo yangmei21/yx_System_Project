@@ -9,7 +9,7 @@ import pytest
 
 class TestAdminLogin(object):
     def setup_class(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
         self.driver.get('http://202.111.177.155:8081/manager/static/ng-ant-admin/index.html#/login/login-form')
         self.driver.maximize_window()
         print('类setup')
