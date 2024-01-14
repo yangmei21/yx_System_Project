@@ -33,7 +33,7 @@ class TestRVmanag(object):
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="menuNav"]/div[1]/app-side-nav/div/div[2]/app-nav-bar/ul/li[3]/div[1]/span[1]').click()
         sleep(2)
-        # 点击景点管理
+        # 点击房车管理
         self.login.driver.find_element(By.LINK_TEXT,
                                        '房车管理').click()
 
