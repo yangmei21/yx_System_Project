@@ -102,10 +102,10 @@ class TestBedcarmanag(object):
 
         assert RV_add_total == RV_total + 1
 
-        sleep(3)
-
-    def teardowm_class(self):
         self.login.driver.quit()
+
+    def teardown_class(self):
+        print("结束执行！")
 
 
 if __name__ == '__main__':

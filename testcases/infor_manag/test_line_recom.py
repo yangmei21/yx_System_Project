@@ -110,8 +110,11 @@ class TestLinemanag(object):
         assert add_total == line_total + 1
         sleep(3)
 
-    def teardown_class(self):
         self.login.driver.quit()
+
+    def teardown_class(self):
+        print("结束执行！")
+
 
 
 if __name__ == '__main__':
