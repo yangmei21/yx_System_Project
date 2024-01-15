@@ -167,11 +167,10 @@ class TestScenicmanag(object):
         assert add_total_records == total_records + 1
 
         sleep(3)
-        self.login.driver.quit()
 
     def teardown_class(self):
+        self.login.driver.quit()
         print("结束执行！")
-
 
 
 if __name__ == '__main__':

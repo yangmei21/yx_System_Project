@@ -14,7 +14,7 @@ from util import util
 
 class TestRVmanag(object):
 
-    def setup_method(self):
+    def setup_class(self):
         self.login = TestAdminLogin
         print('调用loginadmin--setup')
 
@@ -105,9 +105,8 @@ class TestRVmanag(object):
 
         sleep(3)
 
-        self.login.driver.quit()
-
     def teardown_class(self):
+        self.login.driver.quit()
         print("结束执行！")
 
 

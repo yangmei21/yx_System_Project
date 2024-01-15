@@ -11,6 +11,7 @@ import pytest
 from testcases.test_admin_login import TestAdminLogin
 from util import util
 
+
 # 数据是手动写入，每次需要在文件中来修改
 class Test_regist_buss(object):
     def setup_class(self):

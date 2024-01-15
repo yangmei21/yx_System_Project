@@ -14,7 +14,7 @@ from util import util
 
 class TestBedcarmanag(object):
 
-    def setup_method(self):
+    def setup_class(self):
         self.login = TestAdminLogin
         print('调用loginadmin--setup')
 
@@ -102,11 +102,10 @@ class TestBedcarmanag(object):
 
         assert RV_add_total == RV_total + 1
 
-        self.login.driver.quit()
-
     def teardown_class(self):
+        self.login.driver.quit()
         print("结束执行！")
 
 
 if __name__ == '__main__':
-    pytest.main(['-vs','test_Bedcar_manag.py'])
+    pytest.main(['-vs', 'test_Bedcar_manag.py'])

@@ -50,7 +50,7 @@ class TestDelshopinfo(object):
             # 从文本中解析出数字
             # 格式为：’1-10 共 xx 条‘，需要获取其中的xx数
             total_records = int(total_records_text.split('共')[-1].split('条')[0].strip())
-            print('\n' +"总数据条数：", total_records)
+            print('\n' + "总数据条数：", total_records)
         else:
             print("未获取到总数据提条数")
 

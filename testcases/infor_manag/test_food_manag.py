@@ -14,7 +14,7 @@ from util import util
 
 class TestFoodmanag(object):
 
-    def setup_method(self):
+    def setup_class(self):
         self.login = TestAdminLogin
         print('调用loginadmin--setup')
 
@@ -229,7 +229,8 @@ class TestFoodmanag(object):
                                        '/html/body/div[2]/div[4]/div/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[10]/nz-form-control/div/div/input').send_keys(
             Dishes_order)
         # 点击确定按钮
-        self.login.driver.find_element(By.XPATH, '/html/body/div[2]/div[4]/div/nz-modal-container/div/div/div[3]/button[1]').click()
+        self.login.driver.find_element(By.XPATH,
+                                       '/html/body/div[2]/div[4]/div/nz-modal-container/div/div/div[3]/button[1]').click()
         sleep(5)
         # 点击提交按钮
         self.login.driver.find_element(By.XPATH,
@@ -245,9 +246,9 @@ class TestFoodmanag(object):
 
         assert food_add_total == food_total + 1
         sleep(2)
-        self.login.driver.quit()
 
     def teardown_class(self):
+        self.login.driver.quit()
         print("结束执行！")
 
 

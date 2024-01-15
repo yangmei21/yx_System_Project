@@ -14,7 +14,7 @@ from util import util
 
 class TestActivity(object):
 
-    def setup_method(self):
+    def setup_class(self):
         self.login = TestAdminLogin
         print('调用loginadmin--setup')
 
@@ -119,9 +119,10 @@ class TestActivity(object):
         assert act_add_total == act_total + 1
 
         sleep(3)
-        self.login.driver.quit()
+
 
     def teardown_class(self):
+        self.login.driver.quit()
         print("结束执行！")
 
 

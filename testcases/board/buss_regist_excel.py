@@ -29,7 +29,7 @@ class Test_regist_buss(object):
                 "bus_add": row[4],
                 "bus_time": row[5],
                 "bus_part": row[6],
-                "bus_status":row[7]
+                "bus_status": row[7]
             })
 
         workbook.close()
