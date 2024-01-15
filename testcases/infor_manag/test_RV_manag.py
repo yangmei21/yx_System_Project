@@ -105,10 +105,10 @@ class TestRVmanag(object):
 
         sleep(3)
 
-
-    def teardowm_class(self):
-        self.login.driver.close()
         self.login.driver.quit()
+
+    def teardown_class(self):
+        print("结束执行！")
 
 
 if __name__ == '__main__':

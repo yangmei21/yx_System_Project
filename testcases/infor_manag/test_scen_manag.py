@@ -12,7 +12,7 @@ from testcases.test_admin_login import TestAdminLogin
 from util import util
 
 
-class TestAddScenic(object):
+class TestScenicmanag(object):
 
     def setup_class(self):
         self.login = TestAdminLogin
@@ -144,7 +144,7 @@ class TestAddScenic(object):
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[9]/nz-form-control/div/div/input').send_keys(
             scen_phone)
-        sleep(5)
+        sleep(1)
         # 选择开放起始时间
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[7]/nz-form-control/div/div/nz-time-picker/div/input').send_keys(
@@ -167,9 +167,11 @@ class TestAddScenic(object):
         assert add_total_records == total_records + 1
 
         sleep(3)
-
-    def teardowm_class(self):
         self.login.driver.quit()
+
+    def teardown_class(self):
+        print("结束执行！")
+
 
 
 if __name__ == '__main__':

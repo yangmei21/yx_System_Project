@@ -12,7 +12,7 @@ from testcases.test_admin_login import TestAdminLogin
 from util import util
 
 
-class TestRVmanag(object):
+class TestBedcarmanag(object):
 
     def setup_method(self):
         self.login = TestAdminLogin

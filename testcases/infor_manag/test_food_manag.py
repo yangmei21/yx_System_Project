@@ -244,11 +244,11 @@ class TestFoodmanag(object):
         print("新增后列表总数为：", food_add_total)
 
         assert food_add_total == food_total + 1
-
-        sleep(3)
-
-    def teardowm_class(self):
+        sleep(2)
         self.login.driver.quit()
+
+    def teardown_class(self):
+        print("结束执行！")
 
 
 if __name__ == '__main__':
