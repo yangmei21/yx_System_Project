@@ -23,7 +23,7 @@ def send_email():
     msg.attach(MIMEText(mail_msg, 'html', 'utf-8'))  # 添加正文
 
     # 添加附件---gbk-->出现乱码问题，参考：https://www.cnblogs.com/huangchenggener/p/10983812.html
-    file_path = 'D:/pycharm_project/yx_System_Project/reports/add_line_report.html'
+    file_path = 'D:/pycharm_project/yx_System_Project/reports/buss_info_report.html'
     with open(file_path, 'r', encoding='gbk') as file:
         file_content = file.read()
 

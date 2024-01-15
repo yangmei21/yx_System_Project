@@ -23,7 +23,7 @@ class TestActivity(object):
         '''
         添加活动成功
         '''
-        act_name = '陶艺制作工作坊'
+        act_name = 'aaa陶艺制作工作坊'
         act_detail = '这个活动邀请您在经验丰富的陶艺师的指导下，亲手制作属于自己的陶瓷艺术品。不仅可以培养创造力，还能了解传统工艺。'
         act_add = '杭州市西湖区西溪湿地公园附近'
         act_price = '266'
