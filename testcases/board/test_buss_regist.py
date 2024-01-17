@@ -236,7 +236,8 @@ class Test_regist_buss(object):
                                                    '/html/body/app-root/div/app-default/app-def-layout-content/nz-layout/nz-layout/nz-layout/nz-content/div/div/app-dept/div/app-card-table-wrap/nz-card/div[2]/app-tree-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[1]/span')
         print('\n修改前的商家名称为：', now_title.text)
         # 点击修改进入修改页面
-        self.login.driver.find_element(By.XPATH, '/html/body/app-root/div/app-default/app-def-layout-content/nz-layout/nz-layout/nz-layout/nz-content/div/div/app-dept/div/app-card-table-wrap/nz-card/div[2]/app-tree-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[6]/span[1]').click()
+        self.login.driver.find_element(By.XPATH,
+                                       '/html/body/app-root/div/app-default/app-def-layout-content/nz-layout/nz-layout/nz-layout/nz-content/div/div/app-dept/div/app-card-table-wrap/nz-card/div[2]/app-tree-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[6]/span[1]').click()
         # 清除之前的填写内容
         self.login.driver.find_element(By.NAME, 'companyName').clear()
         # 输入新的名称
@@ -246,10 +247,10 @@ class Test_regist_buss(object):
         sleep(2)
         # 获取修改后的名称
         edits_title = self.login.driver.find_element(By.XPATH,
-                                                   '/html/body/app-root/div/app-default/app-def-layout-content/nz-layout/nz-layout/nz-layout/nz-content/div/div/app-dept/div/app-card-table-wrap/nz-card/div[2]/app-tree-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[1]/span')
-        print('修改后的名称：',edits_title.text)
+                                                     '/html/body/app-root/div/app-default/app-def-layout-content/nz-layout/nz-layout/nz-layout/nz-content/div/div/app-dept/div/app-card-table-wrap/nz-card/div[2]/app-tree-table/nz-table/nz-spin/div/div/nz-table-inner-scroll/div/table/tbody/tr[2]/td[1]/span')
+        print('修改后的名称：', edits_title.text)
         # 断言判断第一条数据是否修改成功
-        assert edits_title.text==edit_title
+        assert edits_title.text == edit_title
 
     def teardown_class(self):
         self.login.driver.quit()
@@ -258,3 +259,5 @@ class Test_regist_buss(object):
 
 if __name__ == '__main__':
     pytest.main(['test_buss_regist.py'])
+
+# 终端执行： pytest .\testcases\board\test_buss_regist.py --html=.\reports\buss_regist_report.html --self-contained-html
