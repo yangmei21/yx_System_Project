@@ -23,7 +23,7 @@ def send_email():
     msg.attach(MIMEText(mail_msg, 'html', 'utf-8'))  # 添加正文
 
     # 添加附件---gbk-->出现乱码问题，参考：https://www.cnblogs.com/huangchenggener/p/10983812.html
-    file_path = 'D:/pycharm_project/yx_System_Project/reports/test_Audit_community.html'
+    file_path = 'D:/pycharm_project/yx_System_Project/reports/test_Audit_Traveler_recruitment.html'
     with open(file_path, 'r', encoding='gbk') as file:
         file_content = file.read()
 
@@ -45,7 +45,7 @@ def send_email():
         s.login(user, pwd)  # 登录QQ邮箱
         s.sendmail(user, to, msg.as_string())  # 发送邮件
         s.quit()  # 退出QQ邮箱服务
-        print('Success')
+        print('发送Success ！！！ฅ◝ ᴗ ◜ฅ')
     except Exception as e:
         print(f'Error: {e}')
 
