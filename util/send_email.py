@@ -17,18 +17,19 @@ def send_email():
 
     # 设置HTML格式的邮件正文
     mail_msg = '''
-    <p>这里是测试报告邮件，请查收！报告文件请见附件内(*^▽^*)
+    <p>测试报告邮件，请查收！
+    <p>报告文件请见附件内ฅ◝ ᴗ ◜ฅ
     <p><a href="http://202.111.177.155:8081/manager/static/ng-ant-admin/index.html#/login/login-form">这是访问后台地址连接</a>
     '''
     msg.attach(MIMEText(mail_msg, 'html', 'utf-8'))  # 添加正文
 
     # 添加附件---gbk-->出现乱码问题，参考：https://www.cnblogs.com/huangchenggener/p/10983812.html
-    file_path = 'D:/pycharm_project/yx_System_Project/reports/test_Audit_Traveler_recruitment.html'
+    file_path = 'D:/pycharm_project/yx_System_Project/reports/test_chang_password.html'
     with open(file_path, 'r', encoding='gbk') as file:
         file_content = file.read()
 
     att1 = MIMEText(file_content, 'html', 'utf-8')
-    att1["Content-Disposition"] = 'attachment;filename="yx_login.html"'
+    att1["Content-Disposition"] = 'attachment;filename="test_chang_password.html"'
     msg.attach(att1)
 
     # 设置邮件主题
