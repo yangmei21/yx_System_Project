@@ -24,12 +24,12 @@ def send_email():
     msg.attach(MIMEText(mail_msg, 'html', 'utf-8'))  # 添加正文
 
     # 添加附件---gbk-->出现乱码问题，参考：https://www.cnblogs.com/huangchenggener/p/10983812.html
-    file_path = 'D:/pycharm_project/yx_System_Project/reports/test_chang_password.html'
+    file_path = 'D:/pycharm_project/yx_System_Project/report.html'
     with open(file_path, 'r', encoding='gbk') as file:
         file_content = file.read()
 
     att1 = MIMEText(file_content, 'html', 'utf-8')
-    att1["Content-Disposition"] = 'attachment;filename="test_chang_password.html"'
+    att1["Content-Disposition"] = 'attachment;filename="report.html"'
     msg.attach(att1)
 
     # 设置邮件主题

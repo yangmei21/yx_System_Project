@@ -21,8 +21,8 @@ class TestRVmanag(object):
     @pytest.mark.dependency(depends=['admin_login'], scope='module')
     def test_add_RV(self):
         '''添加房车成功'''
-        RV_name = '房车天地'
-        RV_detail = '提供多种款式的房车，包括自行式和拖挂式，适合家庭旅行、商务出差和户外探险。'
+        RV_name = '无限房车工坊'
+        RV_detail = '无限房车工坊，专注于为您的房车提供全方位的改造服务。我们拥有丰富的经验和专业的技术团队，致力于为您打造舒适、安全、个性化的房车。无论是外观改造、内部装修还是性能提升，我们都将竭诚为您提供卓越的品质和满意的服务。'
         RV_add = '北京市朝阳区建国路88号'
         RV_phone = '123-4567-8901'
 
@@ -54,12 +54,12 @@ class TestRVmanag(object):
         # 上传门店图片
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[1]/nz-form-control/div/div/div[1]/nz-upload/div/div/input').send_keys(
-            r"F:\picture\test\pic8.png")
+            r"F:\picture\test\pic17.png")
 
         # 上传门店缩略图
         upload_element = self.login.driver.find_element(By.XPATH,
                                                         '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[2]/nz-form-control/div/div/div[1]/nz-upload/div/div/input')
-        upload_element.send_keys(r"F:\picture\test\pic9.png")
+        upload_element.send_keys(r"F:\picture\test\pic17.png")
         # upload_element.send_keys(Keys.RETURN)
 
         # 填写房车店名称

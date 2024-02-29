@@ -71,10 +71,10 @@ class TestScenicmanag(object):
     @pytest.mark.dependency(depends=['admin_login'], scope='module')
     def test_add_scenic_right(self):
         '''添加景区成功'''
-        scen_name = '周庄镇'
-        scen_detail = '周庄，是一座江南小镇，有"中国第一水乡"之誉，是国家首批5A级景区。周庄始建于1086年(北宋元佑元年)，因邑人周迪功先生捐地修全福寺而得名。春秋时为吴王少子摇的封地，名为贞丰里。'
-        scen_add = '江苏省苏州市昆山市周庄镇全福路43号'
-        scen_phone = '4008282900'
+        scen_name = '张家界'
+        scen_detail = '张家界国家森林公园是中国最早开发的国家森林公园，其石英砂岩峰形成的自然景观秀丽壮观，是避暑、养生、疗养的好去处。'
+        scen_add = '湖南省西北部'
+        scen_phone = '无'
         excpet = '必填项'
         # 点击关闭弹框
         self.login.driver.find_element(By.XPATH, '//*[@id="driver-popover-item"]/div[4]/button').click()
@@ -108,7 +108,7 @@ class TestScenicmanag(object):
 
         # 定位并选择自己想要勾选的分类
         for option in options:
-            if option.text == "古村古镇":
+            if option.text == "自然景观":
                 option.click()
                 break
         sleep(2)
@@ -120,12 +120,12 @@ class TestScenicmanag(object):
         # upload_element.send_keys(Keys.RETURN)
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[2]/nz-form-control/div/div/div[1]/nz-upload/div/div/input').send_keys(
-            r"F:\picture\test\pic7.png")
+            r"F:\picture\test\pic18.png")
 
         # 上传景点缩略图
         upload_element = self.login.driver.find_element(By.XPATH,
                                                         '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[3]/nz-form-control/div/div/div[1]/nz-upload/div/div/input')
-        upload_element.send_keys(r"F:\picture\test\pic7.png")
+        upload_element.send_keys(r"F:\picture\test\pic18.png")
         # upload_element.send_keys(Keys.RETURN)
 
         # 填写景点名称
@@ -157,7 +157,7 @@ class TestScenicmanag(object):
         # 点击确认按钮
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[3]/button[1]').click()
-        sleep(1)
+        sleep(5)
 
         # 调用util中获取列表总数的方法来获取新增后的列表数
         add_total_records = util.get_total(self.login.driver, '.ant-pagination-total-text')

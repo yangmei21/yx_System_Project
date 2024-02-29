@@ -21,8 +21,8 @@ class TestBedcarmanag(object):
     @pytest.mark.dependency(depends=['admin_login'], scope='module')
     def test_add_RV(self):
         '''添加床车成功'''
-        Bedcar_name = '自在旅途床车店'
-        Bedcar_detail = '自在旅途床车店是一家专注于提供床车自驾游服务的商家。我们提供多种款式的床车，以及详细的自驾游攻略，让您在旅途中尽情享受自由和舒适。'
+        Bedcar_name = '畅享床车改装'
+        Bedcar_detail = '畅享床车改装，致力于为您的床车提供专业、个性化的改造服务。我们拥有丰富的改装经验和精湛的工艺技术，为您打造舒适、安全、个性化的床车。无论您是床车爱好者还是商务需求，我们都将竭诚为您提供满意的改装方案。'
         Bedcar_add = '成都市武侯区人民南路四段8号附2号'
         Bedcar_phone = '028-66667890'
         sleep(3)
@@ -54,12 +54,12 @@ class TestBedcarmanag(object):
         # 上传门店图片
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[1]/nz-form-control/div/div/div[1]/nz-upload/div/div/input').send_keys(
-            r"F:\picture\test\pic10.png")
+            r"F:\picture\test\pic16.png")
 
         # 上传门店缩略图
         upload_element = self.login.driver.find_element(By.XPATH,
                                                         '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[2]/nz-form-control/div/div/div[1]/nz-upload/div/div/input')
-        upload_element.send_keys(r"F:\picture\test\pic10.png")
+        upload_element.send_keys(r"F:\picture\test\pic16.png")
         # upload_element.send_keys(Keys.RETURN)
 
         # 填写房车店名称
@@ -82,7 +82,7 @@ class TestBedcarmanag(object):
         # 选择开放起始时间
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[6]/nz-form-control/div/div/nz-time-picker/div/input').send_keys(
-            "8:30")
+            "10:30")
         # 选择开放截至时间
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[7]/nz-form-control/div[1]/div/nz-time-picker/div/input').send_keys(

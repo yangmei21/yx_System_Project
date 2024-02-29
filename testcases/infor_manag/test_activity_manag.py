@@ -23,8 +23,8 @@ class TestActivity(object):
         '''
         添加活动成功
         '''
-        act_name = 'aaa陶艺制作工作坊'
-        act_detail = '这个活动邀请您在经验丰富的陶艺师的指导下，亲手制作属于自己的陶瓷艺术品。不仅可以培养创造力，还能了解传统工艺。'
+        act_name = '山清水秀度假村'
+        act_detail = '在远离城市喧嚣的山谷中，搭起帐篷，仰望满天繁星。活动还包括烤肉、篝火晚会和天文望远镜观星，让你与大自然零距离接触。'
         act_add = '杭州市西湖区西溪湿地公园附近'
         act_price = '266'
 
@@ -94,11 +94,11 @@ class TestActivity(object):
         # 填写活动起始时间
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[7]/nz-form-control/div/div/nz-date-picker/div/input').send_keys(
-            "2024-01-12 08:30")
+            "2024-01-22 08:30")
         # 填写活动截至时间
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[8]/nz-form-control/div/div/nz-date-picker/div/input').send_keys(
-            "2024-01-22 19:30")
+            "2024-02-22 19:30")
         # 填写门票
         self.login.driver.find_element(By.XPATH,
                                        '//*[@id="cdk-overlay-2"]/nz-modal-container/div/div/div[2]/app-dept-manage-modal/form/nz-form-item[9]/nz-form-control/div/div/input').send_keys(
